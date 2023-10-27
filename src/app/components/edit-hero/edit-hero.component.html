@@ -1,0 +1,45 @@
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div *ngIf="hero">
+                <h2>{{hero.heroName}}</h2>
+                <div>
+                    Name:
+                    <input [(ngModel)] = "hero.heroName" placeholder="Hero Name" />
+                </div>
+                <div>
+                    Name:
+                    <input [(ngModel)] = "hero.firstName" placeholder="First Name" />
+                </div>
+                <div>
+                    Name:
+                    <input [(ngModel)] = "hero.lastName" placeholder="Last Name" />
+                </div>
+                <div>
+                    Name:
+                    <input [(ngModel)] = "hero.superPowers" placeholder="Super Powers" />
+                </div>
+                <div>
+                    Name:
+                    <input [(ngModel)] = "hero.city" placeholder="City" />
+                </div>
+                <button (click) = "updateHero(hero)" *ngIf="hero.superHeroId">Save</button>
+                <button (click) = "deleteHero(hero)" *ngIf="hero.superHeroId">Delete</button>
+                <button (click) = "createHero(hero)" *ngIf="!hero.superHeroId">Create</button>
+                </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>

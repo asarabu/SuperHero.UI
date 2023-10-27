@@ -1,0 +1,17 @@
+
+th{
+    color: blue;
+    width: auto;
+    text-align: center;
+}
+td{
+    width: auto;
+    text-align: center;
+}
+
+h2{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
